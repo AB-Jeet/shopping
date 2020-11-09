@@ -1,0 +1,75 @@
+
+.banner_image{padding-top: 75px;
+padding-bottom: 50px;
+text-align: center;
+color: #f8f8f8;
+background-image: url('intro.jpg');
+background-size: cover;
+}
+
+body
+
+{
+background-image: url('intro.jpg');
+
+}
+.banner_content{position: relative;
+padding-top: 6%;
+padding-bottom: 6%;
+margin-top: 12%;
+margin-bottom: 12%;
+background-color: rgba(0, 0, 0, 0.7); 
+
+max-width: 660px;
+}
+
+.brand1{
+
+text-align: center;
+padding-top: 50px;
+
+}
+
+.image-resize{
+
+height: 380px;
+object-fit: cover;
+object-position: center center;
+
+
+}
+footer{padding: 10px 0;
+       background-color: #101010;
+       color:pink;
+       bottom:100%;
+       width: 100%;
+       font-weight: bold;
+}
+
+
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .panel-footer section hr {
+    width: 50%;
+  }
+  
+
+.row_style{margin-top: 100px;
+          margin-bottom: 15%;
+}
+.text_styling{font-style: italic;
+             font-size: 12px;
+}
+.link{text-decoration: none;
+     font-weight: bold;
+}
+.gap{margin-top:30px;
+}
+.row_bg{background-color: #ddd;
+}
+.rowstyle{margin-top: 20%;
+          font-size: 17px;
+}

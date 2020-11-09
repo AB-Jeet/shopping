@@ -1,0 +1,178 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!--jQuery library--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <title>Sign Up Page</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="newcss.css" type="text/css">
+        
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">Lifestyle Store</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row row_style">
+                <div class="col-xs-4 col-xs-offset-4">
+                    <h2>SIGN UP</h2>
+
+
+                       <form action="signupdata.php"  method="post" > 
+                <!--   <form>  -->
+                       <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Name" class="form-control input-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" id="email" placeholder="Email" class="form-control input-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" placeholder="Password" class="form-control input-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="contact" id="contact" placeholder="Contact" class="form-control input-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="city" id="city" placeholder="City" class="form-control input-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="address" id="address" placeholder="Address" class="form-control input-sm" required>
+                        </div>
+                    </form> <a href="login.html">
+                    <button class="btn btn-primary btn-sm" id="btn" onclick="alert('Signup Successfull ! Now Click to Continue')">Submit</button></a>
+                    <a href="login.html"><button type="submit" 
+                             id="button" class="btn btn-secondary" data-dismiss="modal" >Continue</button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+             
+
+  <script >
+    
+      
+let signupdata =[];
+                const add_data1 = (e) =>{
+
+
+
+                    e.preventDefault();
+                    let d2={
+                           
+
+                           
+                           name : document.getElementById('name').value,
+                      email : document.getElementById('email').value,
+                      password : document.getElementById('password').value,
+                       contact : document.getElementById('contact').value,
+                       city : document.getElementById('city').value,
+                       address : document.getElementById('address').value,
+
+                    }
+
+
+                    signupdata.push(d2);
+                   document.forms[0].reset(); 
+
+
+                    localStorage.setItem('Data',JSON.stringify(signupdata));
+
+                }
+
+                    
+                    document.addEventListener('DOMContentLoaded',()=>{
+                        document.getElementById('btn').addEventListener('click',add_data1);
+
+
+                    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        <footer><center>Copyright © Lifestyle Store. All Rights Reserved || Contact Us: +91 90000 00000</center></footer>
+-->
+        <footer class="panel-footer" style="background-color:rgba(0, 0, 0, 0.7);">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span style="color: red;">CONTACT :</span><br>
+          +91 90000 00000<br>
+          ANYTIME<br>
+          
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span style="color: red;" >ADDRESS :</span><br>
+          XYZ H.No. 007<br>
+          WASHIGNTON DC
+          
+          <hr class="visible-xs">
+        </section>
+         <section id="testimonial" class="col-sm-4">
+          <span style="color: red;">HELP :</span><br>
+          ccare@lifestore.com<br>
+          ccare_consumer@lifestore.com
+          
+          <hr class="visible-xs">
+        </section>
+
+        
+      </div>
+      <div class="text-center">&copy; <b> Copyright <br>Lifstyle Store<br>All Rights Reserved <br>Conditions of Use & Sale</b></div>
+    </div>
+  </footer>
+    </body>         
+</html>
